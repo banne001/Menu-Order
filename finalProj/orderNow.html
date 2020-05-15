@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/order.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <h1><a href="chipozyl.html">Chipozyl</a></h1>
+    <h2>Order Now!</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <form action="" method="GET" id="ordering">
+                    <label for="how">How would you like to eat?</label>
+                    <span id="error-how" class='hidden'>*required</span> <br>
+                    <input type="radio" name="how" id="bur" value="Burrito">
+                    <label for="bur">Burrito</label>
+                    <input type="radio" name="how" id="burbowl" value="Burrito Bowl">
+                    <label for="burbowl">Burrito Bowl</label>
+                    <input type="radio" name="how" id="salad" value="Salad">
+                    <label for="salad">Salad</label>
+                    <input type="radio" name="how" id="tac" value="Tacos">
+                    <label for="tac">Tacos</label>
+                    <br>
+                    <label for="filling">What Filling would you like?</label>
+                    <span id="error-filling" class='hidden'>*required</span> <br>
+                    <select name="filling" id="filling">
+                        <option value="none">Select a Filling</option>
+                        <option value="Chicken">Chicken</option>
+                        <option value="Steak">Steak</option>
+                        <option value="Barbacoa">Barbacoa</option>
+                        <option value="Carnitas">Carnitas</option>
+                        <option value="Sofritas">Sofritas</option>
+                        <option value="Veggies">Veggie</option>
+                    </select>
+
+                    <br>
+
+                    <label for="rice">What about Rice?</label>
+                    <span id="error-rice" class='hidden'>*required</span> <br>
+                    <input type="radio" name="rice" id="white" value="White Rice">
+                    <label for="white">White Rice</label>
+                    <input type="radio" name="rice" id="brown" value="Brown Rice">
+                    <label for="brown">Brown Rice</label>
+                    <input type="radio" name="rice" id="noRice" value="No rice">
+                    <label for="noRice">No Rice</label>
+
+                    <br>
+
+                    <label for="beans">Maybe some Beans?</label>
+                    <span id="error-beans" class='hidden'>*required</span> <br>
+                    <input type="radio" name="beans" id="black" value="Black Beans">
+                    <label for="beans">Black Beans</label>
+                    <input type="radio" name="beans" id="pinto" value="Pinto Beans">
+                    <label for="beans">Pinto Beans</label>
+                    <input type="radio" name="beans" id="noBeans" value="No Beans">
+                    <label for="noBeans">No Beans</label>
+
+                    <br><br>
+                    <label for="topping">Add some Toppings!</label> <br>
+                    <div class="container">
+                        <div class="row">
+                            
+                            <div class="col-6">
+                                <input type="checkbox" name="topping" id="guac" value="Guacamole">
+                                <label for="guac">Guacamole</label>
+                            </div>
+                            <div class="col-6">
+                                <input type="checkbox" name="topping" id="tom" value="Fresh Tomato Salsa">
+                                <label for="tom">Fresh Tomato Salsa</label>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <input type="checkbox" name="topping" id="Rchili" value="Roasted Chili-corn Salsa">
+                                <label for="Rchili">Roasted Chili-corn Salsa</label>
+                            </div>
+                            <div class="col-6">
+                                <input type="checkbox" name="topping" id="Tchili" value="Tomatillo-Red Chili Salsa">
+                                <label for="Tchili">Tomatillo-Red Chili Salsa</label>
+                            </div>
+                            <div class="col-6">
+                                <input type="checkbox" name="topping" id="sour" value="Sour Cream">
+                                <label for="sour">Sour Cream</label>
+                            </div>
+                            <div class="col-6">
+                                <input type="checkbox" name="topping" id="faj" value="Fajitas">
+                                <label for="faj">Fajitas</label> <br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <input type="checkbox" name="topping" id="cheese" value="Cheese">
+                                <label for="cheese">Cheese</label>
+                            </div>
+                            <div class="col-6">
+                                <input type="checkbox" name="topping" id="let" value="Romaine Lettuce">
+                                <label for="let">Romaine Lettuce</label>
+                            </div>
+                            <div class="col-6">
+                                <input type="checkbox" name="topping" id="queso" value="Queso Blanco">
+                                <label for="queso">Queso Blanco</label>
+                            </div>
+                        </div>
+                    </div>           
+                </form>
+                <button id="add">Add to Bag</button>
+            </div>
+            <div class="col-4" id="sub">
+                <h5 id="Subtotal">Total: $0.00</h5>
+                <h6>Double Click on the item to Delete</h6>
+                <div id="orders">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <form action="success.php" method="get" id="chipozyl">
+        <hr>
+        <div id="order">
+            <br>
+            <label for="fname">First Name: </label>
+            <span id="error-fname" class='hidden'>*required</span> <br>
+            <input type="text" name="fname" id="fname">
+            <br>
+            <label for="lname">Last Name: </label>
+            <span id="error-lname" class='hidden'>*required</span> <br>
+            <input type="text" name="lname" id="lname">
+
+            <br>
+            <input type="radio" name="method" id="pickup">
+            <label for="pickup">Pick-Up</label> &nbsp  &nbsp
+            <input type="radio" name="method" id="delivery">
+            <label for="delivery">Delivery</label> <br>
+            <span id="error-methods" class='hidden'>*required</span> <br>
+            <textarea name="sendorder" id="sendorder" cols="0" rows="0" class="hidden"></textarea>
+            <input type="submit" value="Order!" style="border: 1px solid grey;">
+            <br><br>
+        </div>
+        <br>
+        
+    </form>
+    <script src="scripts/validateFunctions.js"></script>    
+    <script src="scripts/order.js"></script>    
+</body>
+</html>

@@ -1,0 +1,47 @@
+body{
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+
+}
+li{
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h3{
+    padding-top: 50px
+}
+
+#order{
+    border: 2px solid blue;
+    padding: 10px 30px 10px 30px;
+
+}
+.col-6:hover{
+    color: green;
+}
+.col-4:hover{
+    color: green;
+}
+
+.container{
+    border: 3px solid lightblue;
+    padding: 10px;
+}
+hr{
+    width: 50%;
+}
+
+figcaption{
+    font-size: large;
+    font-family: fantasy;
+}
+
+button{
+    border: transparent;
+}
